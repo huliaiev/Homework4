@@ -10,3 +10,5 @@ public class ClientDAOEx extends AbstractDAO<Integer, Client> {
         super(conn, table);
     }
 }
+
+

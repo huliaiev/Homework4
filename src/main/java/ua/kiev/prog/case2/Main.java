@@ -24,9 +24,9 @@ public class Main {
 
         Connection conn = factory.getConnection();
         try {
-            ClientDAOEx dao = new ClientDAOEx(conn, "clients");
-            GoodDAOEx dao1 = new GoodDAOEx(conn, "goods");
-            OrderDAOEx dao2 = new OrderDAOEx(conn, "orders");
+            ClientDAOEx dao = new ClientDAOEx(conn, "Clients");
+            GoodDAOEx dao1 = new GoodDAOEx(conn, "Goods");
+            OrderDAOEx dao2 = new OrderDAOEx(conn, "Orders");
 
             Client c = new Client("test", 1);
             Client c1 = new Client("test1", 2);

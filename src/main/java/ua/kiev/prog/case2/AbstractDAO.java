@@ -16,6 +16,27 @@ public abstract class AbstractDAO<K, T> {
         this.table = table;
     }
 
+    public void init() {
+        try {
+            Statement st = conn.createStatement();
+            try {
+                st.execute("DROP TABLE IF EXISTS Clients");
+                st.execute("CREATE TABLE Clients (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(20) NOT NULL, age INT)");
+
+                st.execute("DROP TABLE IF EXISTS Goods");
+                st.execute("CREATE TABLE Goods (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(20) NOT NULL, age INT)");
+
+                st.execute("DROP TABLE IF EXISTS Orders");
+                st.execute("CREATE TABLE Orders (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(20) NOT NULL, age INT)");
+
+            } finally {
+                st.close();
+            }
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+
     public void add(T t) {
         try {
             Field[] fields = t.getClass().getDeclaredFields();
