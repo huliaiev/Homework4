@@ -5,16 +5,15 @@ public class Good {
     @Id
     private int id;
 
-    private String name;
-    private int age;
-
+    private String title;
+    private double cost;
 
     public Good() {
     }
 
-    public Good(String name, int age) {
-        this.name = name;
-        this.age = age;
+    public Good(String title, double cost) {
+        this.title = title;
+        this.cost = cost;
     }
 
     public int getId() {
@@ -25,28 +24,28 @@ public class Good {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public int getAge() {
-        return age;
+    public double getCost() {
+        return cost;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setCost(double cost) {
+        this.cost = cost;
     }
 
     @Override
     public String toString() {
         return "Good{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
+                ", title='" + title + '\'' +
+                ", cost=" + cost +
                 '}';
     }
 }

@@ -5,15 +5,15 @@ public class Order {
     @Id
     private int id;
 
-    private String name;
-    private int age;
+    private String title;
+    private int orderNumber;
 
     public Order() {
     }
 
-    public Order(String name, int age) {
-        this.name = name;
-        this.age = age;
+    public Order(String title, int orderNumber) {
+        this.title = title;
+        this.orderNumber = orderNumber;
     }
 
     public int getId() {
@@ -24,28 +24,28 @@ public class Order {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public int getAge() {
-        return age;
+    public int getOrderNumber() {
+        return orderNumber;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setOrderNumber(int orderNumber) {
+        this.orderNumber = orderNumber;
     }
 
     @Override
     public String toString() {
         return "Order{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
+                ", title='" + title + '\'' +
+                ", orderNumber=" + orderNumber +
                 '}';
     }
 }
